@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from.models import Item
-
-# Create your views here.
+from .forms import ItemForm
 
 
 def get_todo_list(request):
@@ -9,10 +8,17 @@ def get_todo_list(request):
     context = {
         'items': items
     }
-
     return render(request, 'todo/todo_list.html', context)
 
-def add_item(request):
-   
 
-    return render(request, 'todo/todo_list.html')
+def add_item(request):
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('get_todo_list')
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'todo/add_item.html', context)
