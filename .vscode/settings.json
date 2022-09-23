@@ -23,5 +23,17 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "python.testing.pytestArgs": [
+      "django_todo"
+   ],
+   "python.testing.unittestEnabled": true,
+   "python.testing.pytestEnabled": false,
+   "python.testing.unittestArgs": [
+      "-v",
+      "-s",
+      "./django_todo",
+      "-p",
+      "*test.py"
+   ]
 }
