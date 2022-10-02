@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import os 
+import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1s$!zz&7p7*c7qop2yv27157#=s)k!csnn7=m1765yzg-=2!!h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arod85-django-todo-app.herokuapp.com']
 
 
 # Application definition
@@ -79,12 +79,11 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
    # 'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
     #    'NAME': BASE_DIR / 'db.sqlite3',
-    
-
+ 
 
 DATABASES = {
     'default': dj_database_url.parse('postgres://qbypczgmnxkuxs:c2e81b4f6d5084631319e4afde637315cdcf3a28732ad31c72eb01edb98e50de@ec2-34-249-236-155.eu-west-1.compute.amazonaws.com:5432/d550omeudofdj9')
-        
+    
     }
 
 
