@@ -35,5 +35,8 @@
       "./django_todo",
       "-p",
       "*test.py"
-   ]
+   ],
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
+   }
 }
